@@ -8,6 +8,8 @@ async function getData() {
     },
   })
 
+  if (!response.ok) throw new Error("Unable to fetch posts!")
+
   return response.json()
 }
 
