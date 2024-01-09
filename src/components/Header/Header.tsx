@@ -9,11 +9,17 @@ const Header = () => {
     <header className={classNames(s["header"])}>
       <Container>
         <p>Header</p>
-        <nav className={classNames(s["nav"])}>
-          <Link href={"/"}>Home</Link>
-          <Link href={"/about"}>About</Link>
-          <Link href={"/blog"}>Blog</Link>
-        </nav>
+        <ul className={classNames(s["nav"])}>
+          <li>
+            <Link href={"/"}>Home</Link>
+          </li>
+          <li>
+            <Link href={"/about"}>About</Link>
+          </li>
+          <li>
+            <Link href={"/blog"}>Blog</Link>
+          </li>
+        </ul>
       </Container>
     </header>
   )
