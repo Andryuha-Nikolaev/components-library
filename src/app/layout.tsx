@@ -1,8 +1,8 @@
 import type { Metadata } from "next"
 import { Open_Sans } from "next/font/google"
-import "../styles/globals.scss"
+import "../style/globals.scss"
 
-const inter = Open_Sans({ subsets: ["latin", "cyrillic"] })
+const inter = Open_Sans({ subsets: ["latin", "cyrillic"], preload: true })
 
 export const metadata: Metadata = {
   title: "Create Next App",
