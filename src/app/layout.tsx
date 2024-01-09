@@ -3,6 +3,7 @@ import { Open_Sans } from "next/font/google"
 import "../style/globals.scss"
 import Header from "@/components/Header/Header"
 import Footer from "@/components/Footer/Footer"
+import Container from "@/common/MainContainer/MainContainer"
 
 const inter = Open_Sans({ subsets: ["latin", "cyrillic"], preload: true })
 
@@ -20,7 +21,9 @@ export default function RootLayout({
     <html lang="ru">
       <body className={inter.className}>
         <Header />
-        <main> {children}</main>
+        <main>
+          <Container>{children}</Container>
+        </main>
         <Footer />
       </body>
     </html>
