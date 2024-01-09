@@ -20,6 +20,12 @@ body {
   min-height: 100dvh;
   width: 100%;
   background-color: gainsboro;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
 }
 
 a {
