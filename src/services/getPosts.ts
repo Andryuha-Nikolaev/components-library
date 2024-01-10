@@ -6,7 +6,6 @@ export const getAllPosts = async () => {
     //   revalidate: GET_POSTS_REVALIDATE,
     // },
   })
-  console.log("aaaaaaaa")
 
   if (!response.ok) throw new Error("Unable to fetch posts.")
   return response.json()
