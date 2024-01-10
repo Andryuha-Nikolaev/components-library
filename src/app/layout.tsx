@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { Open_Sans } from "next/font/google"
+import { Providers } from "@/redux/provider"
 import "../style/globals.scss"
 import Header from "@/components/Header/Header"
 import Footer from "@/components/Footer/Footer"
@@ -22,7 +23,9 @@ export default function RootLayout({
       <body className={inter.className}>
         <Header />
         <main>
-          <Container>{children}</Container>
+          <Container>
+            <Providers>{children}</Providers>
+          </Container>
         </main>
         <Footer />
       </body>
