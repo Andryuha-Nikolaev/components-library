@@ -2,9 +2,11 @@ const GET_POSTS_REVALIDATE = 5
 
 export const getAllPosts = async () => {
   const response = await fetch("https://jsonplaceholder.typicode.com/posts", {
+    // const response = await fetch("http://localhost:3300/posts", {
     // next: {
-    //   revalidate: GET_POSTS_REVALIDATE,
+    //   revalidate: 5,
     // },
+    cache: "no-cache",
   })
 
   if (!response.ok) throw new Error("Unable to fetch posts.")
@@ -15,9 +17,9 @@ export const getPostById = async (id: string) => {
   const response = await fetch(
     `https://jsonplaceholder.typicode.com/posts/${id}`,
     {
-      // next: {
-      //   revalidate: GET_POSTS_REVALIDATE,
-      // },
+      next: {
+        revalidate: GET_POSTS_REVALIDATE,
+      },
     }
   )
   if (!response.ok) throw new Error("Unable to fetch posts.")
@@ -42,9 +44,9 @@ export const getPostsBySearch = async (search: string) => {
   const response = await fetch(
     `https://jsonplaceholder.typicode.com/posts?q=${search}`,
     {
-      // next: {
-      //   revalidate: GET_POSTS_REVALIDATE,
-      // },
+      next: {
+        revalidate: GET_POSTS_REVALIDATE,
+      },
     }
   )
 

@@ -5,7 +5,7 @@ import "../style/globals.scss"
 import Header from "@/components/Header/Header"
 import Footer from "@/components/Footer/Footer"
 import Container from "@/common/MainContainer/MainContainer"
-import { getAllPosts } from "@/services/getPosts"
+// import { getAllPosts } from "@/services/getPosts"
 
 const inter = Open_Sans({ subsets: ["latin", "cyrillic"], preload: true })
 
@@ -19,18 +19,19 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const posts = await getAllPosts()
+  // const posts = await getAllPosts()
 
   return (
     <html lang="ru">
       <body className={inter.className}>
-        <Header />
-        <main>
-          <Container>
-            <Providers count={posts.length}>{children}</Providers>
-          </Container>
-        </main>
-        <Footer />
+        {/* <Providers count={posts.length}>{children}</Providers> */}
+        <Providers count={0}>
+          <Header />
+          <main>
+            <Container>{children}</Container>
+          </main>
+          <Footer />
+        </Providers>
       </body>
     </html>
   )
