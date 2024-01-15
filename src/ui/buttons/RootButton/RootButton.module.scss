@@ -1,5 +1,18 @@
 @import "../../../style/vars";
 
 .button {
-  background-color: red;
+  background-color: $button-bg;
+  max-width: 438px;
+  min-height: 49px;
+  transition: $transition-opacity;
+  color: $white;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &.var2 {
+    background-color: $button-bg-var2;
+    color: $white;
+  }
 }

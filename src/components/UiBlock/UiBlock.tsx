@@ -5,7 +5,7 @@ import RootButton from "@/ui/buttons/RootButton/RootButton"
 const UiBlock = () => {
   return (
     <div className={s["block"]}>
-      <RootButton />
+      <RootButton>Кнопка вариант 1</RootButton>
     </div>
   )
 }

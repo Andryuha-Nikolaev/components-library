@@ -35,9 +35,14 @@ $header-height-desk: 104px;
 
 // transition
 
-$transition: all 0.3s ease-in-out;
+$transition-duration: 0.2s;
+$transition-animation: ease;
 
-$transition-color-bgcolor: color 0.3s ease-in-out,
-  background-color 0.3s ease-in-out;
+$transition-all: all $transition-duration $transition-animation;
 
-$transition-opacity: opacity 0.3s ease-in-out;
+$transition-color: color $transition-duration $transition-animation;
+
+$transition-color-bgcolor: background-color $transition-duration
+  $transition-animation;
+
+$transition-opacity: opacity $transition-duration $transition-animation;
