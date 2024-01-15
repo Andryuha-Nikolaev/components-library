@@ -5,12 +5,14 @@ $black: #1f1f1f;
 $white: #fff;
 $blue: #003580;
 $dark-red: #ed2e38;
+$middle-red: #f15860;
 $dark-gray: #b2b6b9;
 $medium-gray: #e0e2e2;
 $light-gray: #f6f6f6;
 
 $link-color: $black;
 $link-color-hover: $dark-red;
+$link-color-focus: $dark-gray;
 
 $button-bg: $dark-red;
 $button-bg-var2: $black;
@@ -35,8 +37,10 @@ $header-height-desk: 104px;
 
 // transition
 
-$transition-duration: 0.2s;
+$transition-duration: 0.3s;
 $transition-animation: ease;
+
+$transition: $transition-duration $transition-animation;
 
 $transition-all: all $transition-duration $transition-animation;
 
