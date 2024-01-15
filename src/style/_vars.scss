@@ -1,9 +1,24 @@
 // @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap");
 
 // color
-$black: #000;
-$white: #f2f2f2;
-$red: #a6192e;
+$black: #1f1f1f;
+$white: #fff;
+$blue: #003580;
+$dark-red: #ed2e38;
+$dark-gray: #b2b6b9;
+$medium-gray: #e0e2e2;
+$light-gray: #f6f6f6;
+
+$link-color: $black;
+$link-color-hover: $dark-red;
+
+$button-bg: $dark-red;
+$button-bg-var2: $black;
+
+$header-bg: $blue;
+$footer-bg: $blue;
+
+$color-block-bg: $black;
 
 // breakpoints
 $mobile: 576px;
@@ -14,9 +29,9 @@ $desk_lg: 1440px;
 $desk_max: 1900px;
 
 // header & archor
-$header-height-mobile: 57px;
+$header-height-mobile: 67px;
 $header-height-tablet: 84px;
-$header-height-desk: 88px;
+$header-height-desk: 104px;
 
 // transition
 
@@ -26,6 +41,3 @@ $transition-color-bgcolor: color 0.3s ease-in-out,
   background-color 0.3s ease-in-out;
 
 $transition-opacity: opacity 0.3s ease-in-out;
-
-$primary-font-family: "Open Sans", system-ui, -apple-system, BlinkMacSystemFont,
-  "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
