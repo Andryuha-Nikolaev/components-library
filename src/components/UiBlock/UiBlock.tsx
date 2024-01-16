@@ -18,21 +18,35 @@ const UiBlock = () => {
       </RootButton>
       <p>
         текст{" "}
-        <RootButton template="link" link="https://ya.ru/" role="link">
+        <RootButton appearance="link" link="https://ya.ru/" role="link">
           ссылка как ссылка в тексте
         </RootButton>
         текст
       </p>
       <RootButton
         styleVariant="2"
-        template="link"
+        appearance="link"
         link="/blog"
         role="next-link"
       >
         ссылка некст
       </RootButton>
+      <RootButton
+        styleVariant="2"
+        appearance="link"
+        link="/ui"
+        role="next-link"
+        linkTarget="_blank"
+      >
+        ссылка некст на новую вкладку
+      </RootButton>
       <RootButton isDisabled>заблоченная кнопка</RootButton>
-      <RootButton isDisabled template="link" link="https://ya.ru/" role="link">
+      <RootButton
+        isDisabled
+        appearance="link"
+        link="https://ya.ru/"
+        role="link"
+      >
         заблоченная ссылка
       </RootButton>
       <RootButton
@@ -41,10 +55,19 @@ const UiBlock = () => {
         }}
         withArrow
       >
-        Кнопка с логом
+        Кнопка с действием и стрелкой
       </RootButton>
-      <RootButton withArrow template="link" role="link" link="https://ya.ru/">
+      <RootButton withArrow appearance="link" role="link" link="https://ya.ru/">
         Со стрелкой
+      </RootButton>
+      <RootButton
+        appearance="link"
+        role="button"
+        onClick={() => {
+          console.log("aaaaaaaa")
+        }}
+      >
+        кнопка как ссылка
       </RootButton>
     </div>
   )

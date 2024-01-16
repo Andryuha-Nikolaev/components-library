@@ -9,7 +9,7 @@ type RootButtonProps = {
   isDisabled?: boolean
   onClick?: () => void
   withArrow?: boolean
-  template?: "button" | "link"
+  appearance?: "button" | "link"
   styleVariant?: "1" | "2" | "3" | "4"
   buttonPosition?: "left" | "center" | "right"
   textTransform?: "none" | "uppercase" | "lowercase"
@@ -24,7 +24,7 @@ const RootButton = ({
   isDisabled = false,
   onClick,
   withArrow = false,
-  template = "button",
+  appearance = "button",
   styleVariant = "1",
   buttonPosition = "center",
   textTransform = "none",
@@ -35,51 +35,63 @@ const RootButton = ({
 }: RootButtonProps) => {
   const buttonClassName = classNames(
     s["root"],
-    s[template],
+    s[appearance],
     s[`var${styleVariant}`],
-    template === "button" && s[buttonPosition],
-    isDisabled && s["disabled"]
+    appearance === "button" && s[buttonPosition],
+    isDisabled && s["disabled"],
+    withArrow && s["with-arrow"]
   )
 
-  const buttonStyle = {
+  const styleConfig = {
     textTransform: textTransform,
   }
 
-  return (
+  const buttonProps = {
+    onClick,
+    style: styleConfig,
+    className: buttonClassName,
+    type: buttonType,
+  }
+
+  const linkProps = {
+    style: styleConfig,
+    className: buttonClassName,
+    href: link,
+    target: "_blank",
+    rel: "noreferrer noopener",
+  }
+
+  const nextLinkProps = {
+    style: styleConfig,
+    className: buttonClassName,
+    href: link ? link : "",
+    target: linkTarget,
+  }
+
+  let ButtonComponent
+
+  const buttonContents = (
     <>
-      {role === "button" && (
-        <button
-          onClick={onClick}
-          style={buttonStyle}
-          className={buttonClassName}
-          type={buttonType}
-        >
-          {children}
-        </button>
-      )}
-      {role === "link" && (
-        <a
-          style={buttonStyle}
-          className={buttonClassName}
-          href={link}
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          {children} {withArrow && <ArrowIcon />}
-        </a>
-      )}
-      {role === "next-link" && (
-        <Link
-          style={buttonStyle}
-          className={buttonClassName}
-          href={link ? link : ""}
-          target={linkTarget}
-        >
-          {children} {withArrow && <ArrowIcon />}
-        </Link>
-      )}
+      {children}
+      {withArrow && <ArrowIcon />}
     </>
   )
+
+  switch (role) {
+    case "button":
+      ButtonComponent = <button {...buttonProps}>{buttonContents}</button>
+      break
+    case "link":
+      ButtonComponent = <a {...linkProps}>{buttonContents}</a>
+      break
+    case "next-link":
+      ButtonComponent = <Link {...nextLinkProps}>{buttonContents}</Link>
+      break
+    default:
+      ButtonComponent = null
+  }
+
+  return ButtonComponent
 }
 
 export default RootButton

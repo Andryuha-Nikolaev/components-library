@@ -29,6 +29,7 @@
   font-size: 14px;
   padding: 10px;
   text-align: center;
+  gap: 8px;
 
   &:hover {
     opacity: 0.8;
@@ -54,6 +55,8 @@
   font-size: inherit;
   max-width: fit-content;
   transition: $transition-color;
+  text-decoration: underline;
+  display: inline;
 
   &:hover {
     color: $link-color-hover;
@@ -62,6 +65,13 @@
       transition: fill $transition;
       fill: $link-color-hover;
     }
+  }
+
+  &.with-arrow {
+    display: inline-flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
   }
 
   &.var2 {
