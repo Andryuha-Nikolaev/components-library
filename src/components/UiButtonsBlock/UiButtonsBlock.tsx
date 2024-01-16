@@ -1,10 +1,10 @@
 "use client"
 
 import React from "react"
-import s from "./UiBlock.module.scss"
+import s from "./UiButtonsBlock.module.scss"
 import RootButton from "@/ui/buttons/RootButton/RootButton"
 
-const UiBlock = () => {
+const UiButtonsBlock = () => {
   return (
     <div className={s["block"]}>
       <RootButton textTransform="uppercase">Кнопка вариант 1</RootButton>
@@ -69,8 +69,17 @@ const UiBlock = () => {
       >
         кнопка как ссылка
       </RootButton>
+      <RootButton
+        appearance="button"
+        role="next-link"
+        withArrow
+        linkTarget="_blank"
+        buttonPosition="right"
+      >
+        вид кнопка, роль ссылка некст, со стрелкой, на новую вкладку, справа
+      </RootButton>
     </div>
   )
 }
 
-export default UiBlock
+export default UiButtonsBlock

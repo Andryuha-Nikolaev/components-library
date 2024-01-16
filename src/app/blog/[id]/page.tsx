@@ -1,5 +1,6 @@
 import { Metadata } from "next"
 import { getPostById } from "@/services/getPosts"
+import metaConstants from "@/constants/meta/meta"
 
 type Props = {
   params: {
@@ -12,7 +13,7 @@ export async function generateMetadata({
 }: Props): Promise<Metadata> {
   const post = await getPostById(id)
   return {
-    title: `Blog | ${post.title}`,
+    title: `Blog | ${post.title} | ${metaConstants.META_SITE_NAME}`,
   }
 }
 

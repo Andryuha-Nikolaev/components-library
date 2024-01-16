@@ -1,8 +1,9 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import metaConstants from "@/constants/meta/meta"
 
 export const metadata: Metadata = {
-  title: "About us",
+  title: `About us | ${metaConstants.META_SITE_NAME}`,
 }
 
 export default function AboutLayout({

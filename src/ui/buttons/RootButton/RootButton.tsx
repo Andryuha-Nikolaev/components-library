@@ -36,7 +36,7 @@ const RootButton = ({
   const buttonClassName = classNames(
     s["root"],
     s[appearance],
-    s[`var${styleVariant}`],
+    s[`variant${styleVariant}`],
     appearance === "button" && s[buttonPosition],
     isDisabled && s["disabled"],
     withArrow && s["with-arrow"]

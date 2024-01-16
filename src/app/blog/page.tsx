@@ -1,9 +1,10 @@
 import { Metadata } from "next"
 import BlogBlock from "@/components/BlogBlock/BlogBlock"
 import { getAllPosts } from "@/services/getPosts"
+import metaConstants from "@/constants/meta/meta"
 
 export const metadata: Metadata = {
-  title: "Blog",
+  title: `Blog | ${metaConstants.META_SITE_NAME}`,
 }
 
 export const revalidate = 10
