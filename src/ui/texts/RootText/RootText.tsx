@@ -1,28 +1,36 @@
-import React from "react"
+import React, { createElement } from "react"
 import s from "./RootText.module.scss"
 import classNames from "classnames"
 
+type TagsProps = "h1" | "h2" | "h3" | "h4" | "p" | "span"
+
 type RootTextProps = {
-  tag: "h1" | "h2" | "h3" | "h4" | "p" | "span"
+  tag: TagsProps
+  as?: TagsProps
   children: React.ReactNode
+  className?: string
+  styleVariant?: "1" | "2"
 }
 
-const RootText = ({ tag, children }: RootTextProps) => {
-  switch (tag) {
-    case "h1":
-      return <h1>{children}</h1>
-    //  break
-    case "h2":
-      return <h2>{children}</h2>
-    //  break
-    case "p":
-      return <p>{children}</p>
-    //  break
-    default:
-      return null
+const RootText = ({
+  tag,
+  as,
+  children,
+  className,
+  styleVariant,
+}: RootTextProps) => {
+  const textClassName = classNames(
+    s["text"],
+    s[`variant${styleVariant}`],
+    as ? s[as] : s[tag],
+    className && className
+  )
+
+  const textProps = {
+    className: textClassName,
   }
 
-  // return <div>RootText</div>
+  return createElement(tag, textProps, children)
 }
 
 export default RootText
