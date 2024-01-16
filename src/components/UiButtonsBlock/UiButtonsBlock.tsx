@@ -8,7 +8,9 @@ const UiButtonsBlock = () => {
   return (
     <div className={s["block"]}>
       <RootButton textTransform="uppercase">Кнопка вариант 1</RootButton>
-      <RootButton styleVariant="2">Кнопка вариант 2</RootButton>
+      <RootButton className={s["btn"]} styleVariant="2">
+        Кнопка вариант 2
+      </RootButton>
       <RootButton buttonPosition="right">Кнопка позиция право</RootButton>
       <RootButton buttonPosition="left" styleVariant="2">
         Кнопка позиция лево

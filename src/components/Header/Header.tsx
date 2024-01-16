@@ -11,8 +11,6 @@ const navLinks = [
 ]
 
 const Header = () => {
-  console.log("aaaaaaaaaaaaaaa")
-
   return (
     <header className={classNames(s["header"])}>
       <Container>

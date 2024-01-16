@@ -1,4 +1,4 @@
-import React from "react"
+import React, { createElement } from "react"
 import s from "./RootButton.module.scss"
 import classNames from "classnames"
 import Link from "next/link"
@@ -8,6 +8,7 @@ type RootButtonProps = {
   children: React.ReactNode
   isDisabled?: boolean
   onClick?: () => void
+  className?: string
   withArrow?: boolean
   appearance?: "button" | "link"
   styleVariant?: "1" | "2" | "3" | "4"
@@ -23,6 +24,7 @@ const RootButton = ({
   children,
   isDisabled = false,
   onClick,
+  className,
   withArrow = false,
   appearance = "button",
   styleVariant = "1",
@@ -39,7 +41,8 @@ const RootButton = ({
     s[`variant${styleVariant}`],
     appearance === "button" && s[buttonPosition],
     isDisabled && s["disabled"],
-    withArrow && s["with-arrow"]
+    withArrow && s["with-arrow"],
+    className && className
   )
 
   const styleConfig = {
@@ -90,6 +93,8 @@ const RootButton = ({
     default:
       ButtonComponent = null
   }
+
+  // return createElement(Link, nextLinkProps, children)
 
   return ButtonComponent
 }
