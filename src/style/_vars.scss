@@ -2,6 +2,7 @@
 
 // color
 $black: #1f1f1f;
+$opacity-black: rgba(0, 0, 0, 0.8);
 $white: #fff;
 $blue: #003580;
 $dark-red: #ed2e38;
@@ -21,6 +22,9 @@ $header-bg: $blue;
 $footer-bg: $blue;
 
 $color-block-bg: $black;
+
+$color-modal-overlay: $opacity-black;
+$color-modal-bg: $white;
 
 // breakpoints
 $mobile: 576px;

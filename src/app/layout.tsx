@@ -4,6 +4,7 @@ import { Open_Sans } from "next/font/google"
 import { Providers } from "@/redux/provider"
 import "../style/globals.scss"
 import Header from "@/components/Header/Header"
+import ModalWrapper from "@/modal/ModalWrapper/ModalWrapper"
 
 const inter = Open_Sans({ subsets: ["latin", "cyrillic"], preload: true })
 
@@ -23,6 +24,7 @@ export default async function RootLayout({
         <Providers count={0}>
           <Header />
           {children}
+          <ModalWrapper />
         </Providers>
       </body>
     </html>
