@@ -24,7 +24,7 @@ export default async function RootLayout({
         <Providers count={0}>
           <Header />
           {children}
-          <ModalWrapper />
+          {/* <ModalWrapper /> */}
         </Providers>
       </body>
     </html>

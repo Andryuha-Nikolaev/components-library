@@ -8,7 +8,7 @@ const ModalWrapper = () => {
     <div className={classNames(s["overlay"])}>
       <div className={classNames(s["modal"])}>
         <div className={classNames(s["close-icon"])}>
-          <CloseIcon color="#000" strokeColor="transparent" form="rect" />
+          <CloseIcon color="#000" strokeColor="#000" form="rect" />
         </div>
         <div>ModalWrapper</div>
       </div>

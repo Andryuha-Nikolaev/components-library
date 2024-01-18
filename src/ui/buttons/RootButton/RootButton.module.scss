@@ -31,7 +31,7 @@
   text-align: center;
   gap: 8px;
 
-  &:hover {
+  @include hoverWrapper {
     opacity: 0.8;
   }
 
@@ -58,7 +58,7 @@
   text-decoration: underline;
   display: inline;
 
-  &:hover {
+  @include hoverWrapper {
     color: $link-color-hover;
 
     path {

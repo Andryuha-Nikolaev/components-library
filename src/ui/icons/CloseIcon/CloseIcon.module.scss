@@ -8,15 +8,22 @@
   height: 50px;
   cursor: pointer;
 
-  &:hover {
+  @include hoverWrapper {
     .line {
       fill: $color-close-icon-hover;
+    }
+    .stroke {
+      fill: $color-close-icon-hover;
+      stroke: $color-close-icon-hover;
     }
   }
 }
 
 .line {
   transition: fill $transition;
+}
+.stroke {
+  transition: fill $transition, stroke $transition;
 }
 
 .icon {
