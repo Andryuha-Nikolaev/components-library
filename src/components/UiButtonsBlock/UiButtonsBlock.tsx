@@ -5,6 +5,7 @@ import s from "./UiButtonsBlock.module.scss"
 import RootButton from "@/ui/buttons/RootButton/RootButton"
 import { useAppDispatch } from "@/redux/hooks"
 import { openModal } from "@/redux/features/modalSlice"
+import testImg from "@/assets/test/gothic2.jpg"
 
 const UiButtonsBlock = () => {
   const dispatch = useAppDispatch()
@@ -86,7 +87,12 @@ const UiButtonsBlock = () => {
       </RootButton>
       <RootButton
         onClick={() => {
-          dispatch(openModal({ modalId: "default" }))
+          dispatch(
+            openModal({
+              modalId: "default",
+              image: testImg.src,
+            })
+          )
         }}
         styleVariant="2"
       >

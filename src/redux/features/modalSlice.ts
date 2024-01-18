@@ -1,7 +1,9 @@
+import React from "react"
 import { createSlice, PayloadAction } from "@reduxjs/toolkit"
 
 export type ModalConfig = {
   modalId?: "default" | "alt"
+  image?: string
 }
 
 type ModalState = {
@@ -20,7 +22,7 @@ export const modal = createSlice({
   name: "modal",
   initialState,
   reducers: {
-    openModal: (state, action: { payload: ModalConfig }) => {
+    openModal: (state, action: PayloadAction<ModalConfig>) => {
       state.isOpen = true
       state.config = action.payload
     },
