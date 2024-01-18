@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit"
-import counterReducer from "./features/counterSlice"
+import counter from "./features/counterSlice"
+import modal from "./features/modalSlice"
 
 export const store = configureStore({
   reducer: {
-    counterReducer,
+    counter,
+    modal,
   },
   devTools: process.env.NEXT_PUBLIC_BUILD_MODE !== "PROD",
 })

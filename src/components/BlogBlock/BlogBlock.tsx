@@ -8,7 +8,7 @@ import { useAppDispatch, useAppSelector } from "@/redux/hooks"
 const BlogBlock = ({ posts }: { posts: any }) => {
   const [blogPosts, setBlogPosts] = useState(posts)
 
-  const count = useAppSelector((state) => state.counterReducer.value)
+  const count = useAppSelector((state) => state.counter.value)
   const dispatch = useAppDispatch()
 
   return (

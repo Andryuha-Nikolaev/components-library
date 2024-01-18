@@ -3,8 +3,12 @@
 import React from "react"
 import s from "./UiButtonsBlock.module.scss"
 import RootButton from "@/ui/buttons/RootButton/RootButton"
+import { useAppDispatch } from "@/redux/hooks"
+import { openModal } from "@/redux/features/modalSlice"
 
 const UiButtonsBlock = () => {
+  const dispatch = useAppDispatch()
+
   return (
     <div className={s["block"]}>
       <RootButton textTransform="uppercase">Кнопка вариант 1</RootButton>
@@ -79,6 +83,14 @@ const UiButtonsBlock = () => {
         buttonPosition="right"
       >
         вид кнопка, роль ссылка некст, со стрелкой, на новую вкладку, справа
+      </RootButton>
+      <RootButton
+        onClick={() => {
+          dispatch(openModal())
+        }}
+        styleVariant="2"
+      >
+        Открыть модалку
       </RootButton>
       <div style={{ height: 700 }}>блок для высоты</div>
     </div>

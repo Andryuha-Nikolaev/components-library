@@ -22,20 +22,17 @@ const CloseIcon = ({ color, strokeColor, form }: CloseIconProps) => {
         >
           <g transform="translate(-37.12,-37.12) scale(1.29,1.29)">
             <g
-              fill="none"
-              fill-rule="nonzero"
-              stroke="none"
-              stroke-width="1"
-              stroke-linecap="butt"
-              stroke-linejoin="none"
-              stroke-miterlimit="10"
-              stroke-dasharray=""
-              stroke-dashoffset="0"
-              font-family="none"
-              font-weight="none"
-              font-size="none"
-              text-anchor="none"
-              style={{ mixBlendMode: "normal" }}
+              style={{
+                fill: "none",
+                fillRule: "nonzero",
+                stroke: "none",
+                strokeWidth: "1",
+                strokeLinecap: "butt",
+                strokeMiterlimit: "10",
+                strokeDasharray: "",
+                strokeDashoffset: "0",
+                mixBlendMode: "normal",
+              }}
             >
               <path
                 className={s["stroke"]}
@@ -44,14 +41,14 @@ const CloseIcon = ({ color, strokeColor, form }: CloseIconProps) => {
                 id="strokeMainSVG"
                 fill={strokeColor}
                 stroke={strokeColor}
-                stroke-linejoin="round"
+                strokeLinejoin="round"
               ></path>
               <g
                 className={s["line"]}
                 transform="scale(5.12,5.12)"
                 fill={color}
                 stroke="none"
-                stroke-linejoin="miter"
+                strokeLinejoin="miter"
               >
                 <path d="M7.71875,6.28125l-1.4375,1.4375l17.28125,17.28125l-17.28125,17.28125l1.4375,1.4375l17.28125,-17.28125l17.28125,17.28125l1.4375,-1.4375l-17.28125,-17.28125l17.28125,-17.28125l-1.4375,-1.4375l-17.28125,17.28125z"></path>
               </g>
@@ -71,20 +68,17 @@ const CloseIcon = ({ color, strokeColor, form }: CloseIconProps) => {
         >
           <g transform="translate(-87.04,-87.04) scale(1.68,1.68)">
             <g
-              fill="none"
-              fill-rule="nonzero"
-              stroke="none"
-              stroke-width="1"
-              stroke-linecap="butt"
-              stroke-linejoin="none"
-              stroke-miterlimit="10"
-              stroke-dasharray=""
-              stroke-dashoffset="0"
-              font-family="none"
-              font-weight="none"
-              font-size="none"
-              text-anchor="none"
-              style={{ mixBlendMode: "normal" }}
+              style={{
+                fill: "none",
+                fillRule: "nonzero",
+                stroke: "none",
+                strokeWidth: "1",
+                strokeLinecap: "butt",
+                strokeMiterlimit: "10",
+                strokeDasharray: "",
+                strokeDashoffset: "0",
+                mixBlendMode: "normal",
+              }}
             >
               <path
                 className={s["stroke"]}
@@ -100,7 +94,7 @@ const CloseIcon = ({ color, strokeColor, form }: CloseIconProps) => {
                 transform="scale(4,4)"
                 fill={color}
                 stroke="none"
-                stroke-linejoin="miter"
+                strokeLinejoin="miter"
               >
                 <path d="M16,14c-0.512,0 -1.02306,0.19494 -1.41406,0.58594c-0.781,0.781 -0.781,2.04712 0,2.82812l14.58594,14.58594l-14.58594,14.58594c-0.781,0.781 -0.781,2.04713 0,2.82812c0.391,0.391 0.90206,0.58594 1.41406,0.58594c0.512,0 1.02306,-0.19494 1.41406,-0.58594l14.58594,-14.58594l14.58594,14.58594c0.781,0.781 2.04713,0.781 2.82812,0c0.781,-0.781 0.781,-2.04713 0,-2.82812l-14.58594,-14.58594l14.58594,-14.58594c0.781,-0.781 0.781,-2.04712 0,-2.82812c-0.781,-0.781 -2.04713,-0.781 -2.82812,0l-14.58594,14.58594l-14.58594,-14.58594c-0.391,-0.391 -0.90206,-0.58594 -1.41406,-0.58594z"></path>
               </g>
