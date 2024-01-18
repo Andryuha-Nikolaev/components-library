@@ -21,11 +21,16 @@ export default async function RootLayout({
   return (
     <html lang="ru">
       <body className={inter.className}>
-        <Providers count={0}>
-          <Header />
-          {children}
-          <ModalWrapper />
-        </Providers>
+        <div
+          style={{ display: "flex", flexDirection: "column", flexGrow: 1 }}
+          id="wrapper"
+        >
+          <Providers count={0}>
+            <Header />
+            {children}
+            <ModalWrapper />
+          </Providers>
+        </div>
       </body>
     </html>
   )

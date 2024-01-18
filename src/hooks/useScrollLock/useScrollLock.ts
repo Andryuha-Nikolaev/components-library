@@ -4,12 +4,6 @@ const useScrollLock = (activeState: boolean) => {
   const [openCount, setOpenCount] = useState(0)
 
   useEffect(() => {
-    const hasVerticalScrollbar = document.body.scrollHeight > window.innerHeight
-    if (hasVerticalScrollbar) {
-      console.log("Есть вертикальная прокрутка")
-    } else {
-      console.log("Нет вертикальной прокрутки")
-    }
     if (activeState) {
       setOpenCount(1)
     }
@@ -18,7 +12,14 @@ const useScrollLock = (activeState: boolean) => {
   console.log(openCount)
 
   useEffect(() => {
+    const wrapper = document.querySelector("#wrapper") as HTMLElement | null
     const bodyFixed = () => {
+      const hasVerticalScrollbar =
+        document.body.scrollHeight > window.innerHeight
+      if (hasVerticalScrollbar && wrapper) {
+        wrapper.style.overflowY = "scroll"
+      }
+
       const scrollY =
         document.documentElement.style.getPropertyValue("--scroll-y")
       document.body.style.position = "fixed"
@@ -26,6 +27,10 @@ const useScrollLock = (activeState: boolean) => {
     }
 
     const bodyStatic = () => {
+      if (wrapper) {
+        wrapper.style.overflowY = "auto"
+      }
+
       const scrollY = document.body.style.top
       document.body.style.position = ""
       document.body.style.top = ""
