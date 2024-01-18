@@ -26,6 +26,8 @@ $color-block-bg: $black;
 $color-modal-overlay: $opacity-black;
 $color-modal-bg: $white;
 
+$color-close-icon-hover: $dark-red;
+
 // breakpoints
 $mobile: 576px;
 $tablet: 768px;
@@ -45,12 +47,3 @@ $transition-duration: 0.3s;
 $transition-animation: ease;
 
 $transition: $transition-duration $transition-animation;
-
-$transition-all: all $transition-duration $transition-animation;
-
-$transition-color: color $transition-duration $transition-animation;
-
-$transition-color-bgcolor: background-color $transition-duration
-  $transition-animation;
-
-$transition-opacity: opacity $transition-duration $transition-animation;

@@ -20,7 +20,7 @@
   width: 100%;
   max-width: 438px;
   min-height: 49px;
-  transition: $transition-opacity;
+  transition: opacity $transition;
   color: $white;
   display: flex;
   align-items: center;
@@ -54,7 +54,7 @@
 .link {
   font-size: inherit;
   max-width: fit-content;
-  transition: $transition-color;
+  transition: color $transition;
   text-decoration: underline;
   display: inline;
 
