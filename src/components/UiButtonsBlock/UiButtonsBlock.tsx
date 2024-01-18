@@ -86,11 +86,19 @@ const UiButtonsBlock = () => {
       </RootButton>
       <RootButton
         onClick={() => {
-          dispatch(openModal())
+          dispatch(openModal({ modalId: "default" }))
         }}
         styleVariant="2"
       >
-        Открыть модалку
+        Открыть модалку default
+      </RootButton>
+      <RootButton
+        onClick={() => {
+          dispatch(openModal({ modalId: "alt" }))
+        }}
+        styleVariant="2"
+      >
+        Открыть модалку alt
       </RootButton>
       <div style={{ height: 700 }}>блок для высоты</div>
     </div>
