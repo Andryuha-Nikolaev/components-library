@@ -4,6 +4,8 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit"
 export type ModalConfig = {
   modalId?: "default" | "alt"
   image?: string
+  notClickableOverlay?: boolean
+  hiddenCloseBtn?: boolean
 }
 
 type ModalState = {

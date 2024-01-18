@@ -18,25 +18,35 @@ const modalComponents: Record<string, React.FC<ModalConfig>> = {
 const ModalWrapper = () => {
   const dispatch = useAppDispatch()
   const { isOpen, config } = useAppSelector((state) => state.modal)
+  const { modalId, notClickableOverlay, hiddenCloseBtn } = config
 
   const handleClose = () => {
     dispatch(closeModal())
   }
 
-  const ModalComponent = modalComponents[config.modalId!] || DefaultModal
+  console.log("clickableOverlay", notClickableOverlay)
+
+  const ModalComponent = modalComponents[modalId!] || DefaultModal
 
   return (
     <div
-      onClick={handleClose}
+      onClick={() => {
+        if (!notClickableOverlay) {
+          handleClose()
+        }
+      }}
       className={classNames(s["overlay"], isOpen && s["open"])}
     >
       <div
         onClick={(event) => event.stopPropagation()}
-        className={classNames(s["modal"])}
+        className={classNames(s["modal"], isOpen && s["open"])}
       >
-        <button onClick={handleClose} className={classNames(s["close-btn"])}>
-          <CloseIcon color="#000" strokeColor="#000" form="rect" />
-        </button>
+        {!hiddenCloseBtn && (
+          <button onClick={handleClose} className={classNames(s["close-btn"])}>
+            <CloseIcon color="#000" strokeColor="#000" form="rect" />
+          </button>
+        )}
+
         <div>
           <ModalComponent {...config} />
         </div>
