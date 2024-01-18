@@ -9,6 +9,7 @@ import { useAppDispatch, useAppSelector } from "@/redux/hooks"
 import type { ModalConfig } from "@/redux/features/modalSlice"
 import DefaultModal from "../DefaultModal/DefaultModal"
 import AltModal from "../AltModal/AltModal"
+import useScrollLock from "@/hooks/useScrollLock/useScrollLock"
 
 const modalComponents: Record<string, React.FC<ModalConfig>> = {
   default: DefaultModal,
@@ -24,7 +25,7 @@ const ModalWrapper = () => {
     dispatch(closeModal())
   }
 
-  console.log("clickableOverlay", notClickableOverlay)
+  useScrollLock(isOpen)
 
   const ModalComponent = modalComponents[modalId!] || DefaultModal
 

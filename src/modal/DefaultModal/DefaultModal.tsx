@@ -5,12 +5,15 @@ import Image from "next/image"
 import RootButton from "@/ui/buttons/RootButton/RootButton"
 import { useAppDispatch } from "@/redux/hooks"
 import { openModal } from "@/redux/features/modalSlice"
+import RootText from "@/ui/texts/RootText/RootText"
 
 const DefaultModal = ({ image, modalId }: ModalConfig) => {
   const dispatch = useAppDispatch()
 
   return (
     <div>
+      <RootText tag="h2">{modalId}</RootText>
+      <RootText tag="p">{modalId}</RootText>
       DefaultModal <Link href={"/"}>home</Link>
       <Link href={"/ui/buttons"}>ui</Link>
       {image && (
@@ -44,7 +47,7 @@ const DefaultModal = ({ image, modalId }: ModalConfig) => {
         }}
         styleVariant="2"
       >
-        Открыть модалку default
+        Открыть модалку alt
       </RootButton>
     </div>
   )
