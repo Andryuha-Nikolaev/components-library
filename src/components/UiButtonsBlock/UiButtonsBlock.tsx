@@ -91,7 +91,6 @@ const UiButtonsBlock = () => {
             openModal({
               modalId: "default",
               image: testImg.src,
-              notClickableOverlay: true,
             })
           )
         }}

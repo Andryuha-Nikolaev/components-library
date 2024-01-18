@@ -28,6 +28,9 @@ $color-modal-bg: $white;
 
 $color-close-icon-hover: $dark-red;
 
+$color-scrollbar-track: $medium-gray;
+$color-scrollbar-thumb: $dark-gray;
+
 // breakpoints
 $mobile: 576px;
 $tablet: 768px;
@@ -55,4 +58,13 @@ $transition: $transition-duration $transition-animation;
       @content;
     }
   }
+}
+
+@mixin noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
