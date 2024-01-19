@@ -5,6 +5,7 @@ import { Providers } from "@/redux/provider"
 import "../style/globals.scss"
 import Header from "@/components/Header/Header"
 import ModalWrapper from "@/modal/ModalWrapper/ModalWrapper"
+import ScrollWrapper from "@/common/ScrollWrapper/ScrollWrapper"
 
 const inter = Open_Sans({ subsets: ["latin", "cyrillic"], preload: true })
 
@@ -21,16 +22,13 @@ export default async function RootLayout({
   return (
     <html lang="ru">
       <body className={inter.className}>
-        <div
-          style={{ display: "flex", flexDirection: "column", flexGrow: 1 }}
-          id="wrapper"
-        >
+        <ScrollWrapper>
           <Providers count={0}>
             <Header />
             {children}
             <ModalWrapper />
           </Providers>
-        </div>
+        </ScrollWrapper>
       </body>
     </html>
   )

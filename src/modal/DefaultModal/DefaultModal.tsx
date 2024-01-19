@@ -6,12 +6,13 @@ import RootButton from "@/ui/buttons/RootButton/RootButton"
 import { useAppDispatch } from "@/redux/hooks"
 import { openModal } from "@/redux/features/modalSlice"
 import RootText from "@/ui/texts/RootText/RootText"
+import ModalContentWrapper from "../ModalContentWrapper/ModalContentWrapper"
 
 const DefaultModal = ({ image, modalId }: ModalConfig) => {
   const dispatch = useAppDispatch()
 
   return (
-    <div>
+    <ModalContentWrapper>
       <RootText tag="h2">{modalId}</RootText>
       <RootText tag="p">{modalId}</RootText>
       DefaultModal <Link href={"/"}>home</Link>
@@ -49,7 +50,7 @@ const DefaultModal = ({ image, modalId }: ModalConfig) => {
       >
         Открыть модалку alt
       </RootButton>
-    </div>
+    </ModalContentWrapper>
   )
 }
 

@@ -47,10 +47,7 @@ const ModalWrapper = () => {
             <CloseIcon color="#000" strokeColor="#000" form="rect" />
           </button>
         )}
-
-        <div>
-          <ModalComponent {...config} />
-        </div>
+        <ModalComponent {...config} />
       </div>
     </div>
   )

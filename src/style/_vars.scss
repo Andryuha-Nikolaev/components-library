@@ -47,7 +47,7 @@ $header-height-desk: 104px;
 // transition
 
 $transition-duration: 0.3s;
-$transition-animation: ease;
+$transition-animation: ease-in-out;
 
 $transition: $transition-duration $transition-animation;
 
