@@ -3,4 +3,16 @@
 .header {
   // background-color: $header-bg;
   background-color: beige;
+
+  &.fixed {
+    width: var(--page-width);
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+}
+
+.block {
+  display: flex;
+  justify-content: space-between;
 }

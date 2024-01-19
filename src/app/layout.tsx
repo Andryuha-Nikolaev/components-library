@@ -22,13 +22,13 @@ export default async function RootLayout({
   return (
     <html lang="ru">
       <body className={inter.className}>
-        <ScrollWrapper>
-          <Providers count={0}>
+        <Providers count={0}>
+          <ScrollWrapper>
             {/* <Header /> */}
             {children}
             <ModalWrapper />
-          </Providers>
-        </ScrollWrapper>
+          </ScrollWrapper>
+        </Providers>
       </body>
     </html>
   )
