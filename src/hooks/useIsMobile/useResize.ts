@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react"
+import { usePathname } from "next/navigation"
 
 const useResize = () => {
   const [isMobile, setIsMobile] = useState(false)
   const [wrapperWidth, setWrapperWidth] = useState(0)
+  const pathname = usePathname()
 
   useEffect(() => {
     const handleResize = () => {
@@ -25,9 +27,7 @@ const useResize = () => {
     return () => {
       window.removeEventListener("resize", handleResize)
     }
-  }, [])
-
-  console.log(wrapperWidth)
+  }, [pathname])
 
   return { isMobile, wrapperWidth }
 }

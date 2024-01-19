@@ -15,6 +15,7 @@
   opacity: 0;
   transition: opacity $transition, visibility $transition;
   padding: 10px;
+  z-index: $z-index-modal;
 
   &.open {
     visibility: visible;

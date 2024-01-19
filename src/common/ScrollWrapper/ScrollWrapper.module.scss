@@ -7,10 +7,6 @@
   position: relative;
 
   @media (hover: none) {
-    overflow: auto !important;
+    overflow: unset !important;
   }
-}
-
-:root {
-  --page-width: 100%;
 }

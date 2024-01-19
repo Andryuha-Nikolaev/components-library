@@ -51,6 +51,9 @@ $transition-animation: ease-in-out;
 
 $transition: $transition-duration $transition-animation;
 
+$z-index-header: 99;
+$z-index-modal: 100;
+
 // mixins
 @mixin hoverWrapper {
   @media (hover: hover) {

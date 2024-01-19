@@ -3,12 +3,15 @@
 .header {
   // background-color: $header-bg;
   background-color: beige;
+  z-index: $z-index-header;
 
   &.fixed {
     width: var(--page-width);
+    // width: 100vw;
     position: fixed;
     top: 0;
     left: 0;
+    right: 0;
   }
 }
 
