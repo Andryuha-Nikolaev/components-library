@@ -24,7 +24,7 @@ export default async function RootLayout({
       <body className={inter.className}>
         <ScrollWrapper>
           <Providers count={0}>
-            <Header />
+            {/* <Header /> */}
             {children}
             <ModalWrapper />
           </Providers>

@@ -8,10 +8,8 @@ export default async function MainLayout({
 }) {
   return (
     <>
-      <main>
-        <Container>{children}</Container>
-      </main>
-      <Footer />
+      <main>{children}</main>
+      {/* <Footer /> */}
     </>
   )
 }

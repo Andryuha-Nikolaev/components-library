@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import metaConstants from "@/constants/meta/meta"
 import RootButton from "@/ui/buttons/RootButton/RootButton"
+import Header from "@/components/Header/Header"
 
 export const metadata: Metadata = {
   title: `UI | ${metaConstants.META_SITE_NAME}`,
@@ -20,6 +21,7 @@ const linksArr = [
 export default function UiLayout({ children }: { children: React.ReactNode }) {
   return (
     <div>
+      <Header />
       <h1>UI Page</h1>
       <ul>
         {linksArr.map((item) => (
