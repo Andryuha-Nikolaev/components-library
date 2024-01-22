@@ -45,14 +45,14 @@ $header-height-tablet: 84px;
 $header-height-desk: 104px;
 
 // transition
-
 $transition-duration: 0.3s;
 $transition-animation: ease-in-out;
-
 $transition: $transition-duration $transition-animation;
 
+// z-index
 $z-index-header: 99;
 $z-index-modal: 100;
+$z-index-scrollbar: 101;
 
 // mixins
 @mixin hoverWrapper {

@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react"
 import { usePathname } from "next/navigation"
 import s from "./CustomScrollbar.module.scss"
+import classNames from "classnames"
 
 const CustomScrollbar = () => {
   const [scrollbarPosition, setScrollbarPosition] = useState(0)
@@ -120,7 +121,10 @@ const CustomScrollbar = () => {
         <div
           id="custom-scrollbar-thumb"
           onMouseDown={handleMouseDown}
-          className={s["custom-scrollbar-thumb"]}
+          className={classNames(
+            s["custom-scrollbar-thumb"],
+            isClicked && s["clicked"]
+          )}
           style={{
             top: `${scrollbarPosition}% `,
             height: thumbHeight,
