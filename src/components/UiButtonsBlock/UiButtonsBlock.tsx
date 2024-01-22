@@ -7,13 +7,23 @@ import { useAppDispatch } from "@/redux/hooks"
 import { openModal } from "@/redux/features/modalSlice"
 import testImg from "@/assets/test/gothic2.jpg"
 import RootText from "@/ui/texts/RootText/RootText"
+import BurgerIcon from "@/ui/icons/BurgerIcon/BurgerIcon"
 
 const UiButtonsBlock = () => {
   const dispatch = useAppDispatch()
   const [openBlock, setOpenBlock] = useState(false)
+  const [isOpenBurger, setIsOpenBurger] = useState(false)
 
   return (
     <div className={s["block"]}>
+      <div
+        onClick={() => {
+          setIsOpenBurger(!isOpenBurger)
+        }}
+      >
+        <BurgerIcon isOpen={isOpenBurger} />
+      </div>
+
       <RootButton textTransform="uppercase">Кнопка вариант 1</RootButton>
       <RootButton className={s["btn"]} styleVariant="2">
         Кнопка вариант 2

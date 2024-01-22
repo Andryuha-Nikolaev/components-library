@@ -87,7 +87,7 @@ const CloseIcon = ({ color, strokeColor, form }: CloseIconProps) => {
                 id="strokeMainSVG"
                 fill={strokeColor}
                 stroke={strokeColor}
-                stroke-linejoin="round"
+                strokeLinejoin="round"
               ></path>
               <g
                 className={s["line"]}
