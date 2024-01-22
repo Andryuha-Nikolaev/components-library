@@ -1,14 +1,25 @@
 import type { Metadata } from "next"
 import metaConstants from "@/constants/meta/meta"
-import { Open_Sans } from "next/font/google"
+import { Open_Sans, Russo_One } from "next/font/google"
 import { Providers } from "@/redux/provider"
 import "../style/globals.scss"
 import Header from "@/components/Header/Header"
 import ModalWrapper from "@/modal/ModalWrapper/ModalWrapper"
 import CustomScrollbarWrapper from "@/common/CustomScrollbarWrapper/CustomScrollbarWrapper"
 import RootStreak from "@/ui/other/RootStreak/RootStreak"
+import classNames from "classnames"
 
-const inter = Open_Sans({ subsets: ["latin", "cyrillic"], preload: true })
+export const openSans = Open_Sans({
+  subsets: ["latin", "cyrillic"],
+  preload: true,
+  variable: "--open-sans-font",
+})
+
+export const russoOne = Russo_One({
+  preload: true,
+  weight: ["400"],
+  variable: "--russo-one-font",
+})
 
 export const metadata: Metadata = {
   title: metaConstants.META_SITE_NAME,
@@ -22,7 +33,7 @@ export default async function RootLayout({
 }) {
   return (
     <html lang="ru">
-      <body className={inter.className}>
+      <body className={classNames(openSans.variable, russoOne.variable)}>
         <Providers count={0}>
           <CustomScrollbarWrapper />
           <Header />

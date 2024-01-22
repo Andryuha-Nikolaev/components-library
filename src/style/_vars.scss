@@ -11,25 +11,30 @@ $dark-gray: #b2b6b9;
 $medium-gray: #e0e2e2;
 $light-gray: #f6f6f6;
 
+// links
 $link-color: $black;
 $link-color-hover: $dark-red;
 $link-color-focus: $dark-gray;
 
+// buttons
 $button-bg: $dark-red;
 $button-bg-var2: $black;
 
+// background
 $header-bg: $blue;
 $footer-bg: $blue;
-
 $color-block-bg: $black;
 
+// modal
 $color-modal-overlay: $opacity-black;
 $color-modal-bg: $white;
 
+// icons
 $color-close-icon-hover: $dark-red;
 $color-burger-icon-hover: $dark-red;
 $color-burger-icon: $white;
 
+// scrollbar
 $color-scrollbar-track: $medium-gray;
 $color-scrollbar-thumb: $dark-gray;
 
@@ -55,6 +60,10 @@ $transition: $transition-duration $transition-animation;
 $z-index-header: 99;
 $z-index-modal: 100;
 $z-index-scrollbar: 101;
+
+// fonts
+$open-sans-font: var(--open-sans-font), sans-serif;
+$russo-one-font: var(--russo-one-font), sans-serif;
 
 // mixins
 @mixin hoverWrapper {
