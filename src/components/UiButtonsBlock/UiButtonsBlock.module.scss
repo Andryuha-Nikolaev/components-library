@@ -9,3 +9,7 @@
 .btn {
   background-color: bisque !important;
 }
+
+.block-height {
+  transition: height $transition;
+}

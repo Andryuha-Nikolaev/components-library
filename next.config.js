@@ -5,9 +5,9 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "specialgamesclub.ru",
+        hostname: "",
         port: "",
-        pathname: "/wp-content/uploads/**",
+        pathname: "/**",
       },
     ],
   },

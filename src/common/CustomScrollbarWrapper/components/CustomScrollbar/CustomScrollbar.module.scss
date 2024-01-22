@@ -1,0 +1,28 @@
+@import "../../../../style/vars";
+.custom-scrollbar {
+  @media (hover: none) {
+    display: none;
+  }
+}
+
+.custom-scrollbar-track {
+  z-index: 101;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  // height: 100dvh;
+  width: 0; /* Ширина полосы прокрутки */
+  // background-color: red; /* Цвет фона полосы прокрутки */
+  border-radius: 5px; /* Скругленные углы полосы прокрутки */
+}
+
+.custom-scrollbar-thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10px;
+  background-color: rgba(70, 70, 70, 0.7); /* Цвет ползунка */
+  border-radius: 5px; /* Скругленные углы ползунка */
+  // transform: translateY(-50%);
+}

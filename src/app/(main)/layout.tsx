@@ -1,5 +1,4 @@
 import Footer from "@/components/Footer/Footer"
-import Container from "@/common/MainContainer/MainContainer"
 
 export default async function MainLayout({
   children,
@@ -9,7 +8,7 @@ export default async function MainLayout({
   return (
     <>
       <main>{children}</main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   )
 }

@@ -5,7 +5,8 @@ import { Providers } from "@/redux/provider"
 import "../style/globals.scss"
 import Header from "@/components/Header/Header"
 import ModalWrapper from "@/modal/ModalWrapper/ModalWrapper"
-import ScrollWrapper from "@/common/ScrollWrapper/ScrollWrapper"
+import CustomScrollbarWrapper from "@/common/CustomScrollbarWrapper/CustomScrollbarWrapper"
+import RootStreak from "@/ui/other/RootStreak/RootStreak"
 
 const inter = Open_Sans({ subsets: ["latin", "cyrillic"], preload: true })
 
@@ -23,11 +24,11 @@ export default async function RootLayout({
     <html lang="ru">
       <body className={inter.className}>
         <Providers count={0}>
-          <ScrollWrapper>
-            {/* <Header /> */}
-            {children}
-            <ModalWrapper />
-          </ScrollWrapper>
+          <CustomScrollbarWrapper />
+          <Header />
+          <RootStreak variant="fixed-header" />
+          {children}
+          <ModalWrapper />
         </Providers>
       </body>
     </html>

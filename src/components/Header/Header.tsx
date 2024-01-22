@@ -6,7 +6,6 @@ import classNames from "classnames"
 import HeaderNavigation from "./components/HeaderNavigation/HeaderNavigation"
 import Container from "@/common/MainContainer/MainContainer"
 import { useAppSelector } from "@/redux/hooks"
-import useResize from "@/hooks/useIsMobile/useResize"
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -16,7 +15,6 @@ const navLinks = [
 
 const Header = () => {
   const isFixedHeader = useAppSelector((state) => state.site.isFixedHeader)
-  useResize()
 
   return (
     <header

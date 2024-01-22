@@ -7,30 +7,46 @@ const useScrollLock = (activeState: boolean) => {
   // console.log(scrollY)
 
   const bodyFixed = () => {
-    const wrapper = document.querySelector("#wrapper") as HTMLElement | null
-    const hasVerticalScrollbar = document.body.scrollHeight > window.innerHeight
-    if (hasVerticalScrollbar && wrapper) {
-      wrapper.style.overflowY = "scroll"
-    }
+    // const wrapper = document.querySelector("#wrapper") as HTMLElement | null
+    // const hasVerticalScrollbar = document.body.scrollHeight > window.innerHeight
+    // if (hasVerticalScrollbar && wrapper) {
+    //   wrapper.style.overflowY = "scroll"
+    // }
 
     // const scrollY =
     //   document.documentElement.style.getPropertyValue("--scroll-y")
+
+    const customScrollbarThumb = document.querySelector(
+      "#custom-scrollbar-thumb"
+    ) as HTMLElement | null
+
+    if (customScrollbarThumb) {
+      customScrollbarThumb.style.visibility = "hidden"
+    }
+
     document.body.style.position = "fixed"
     document.body.style.top = `-${scrollY}px`
   }
 
   const bodyStatic = () => {
-    const wrapper = document.querySelector("#wrapper") as HTMLElement | null
+    const customScrollbarThumb = document.querySelector(
+      "#custom-scrollbar-thumb"
+    ) as HTMLElement | null
+
+    if (customScrollbarThumb) {
+      customScrollbarThumb.style.visibility = "visible"
+    }
+    // const wrapper = document.querySelector("#wrapper") as HTMLElement | null
     const scrollY = document.body.style.top
     document.body.style.position = ""
     document.body.style.top = ""
     // document.documentElement.style.scrollBehavior = "auto"
-    // eslint-disable-next-line radix
+
     window.scrollTo(0, parseInt(scrollY || "0") * -1)
     // document.documentElement.style.scrollBehavior = "smooth"
-    if (wrapper) {
-      wrapper.style.overflowY = ""
-    }
+    // if (wrapper) {
+    //   wrapper.style.overflowY = ""
+    // }
   }
 
   const handleScroll = () => {
@@ -38,6 +54,7 @@ const useScrollLock = (activeState: boolean) => {
     //   "--scroll-y",
     //   `${window.scrollY}px`
     // )
+
     setScrollY(window.scrollY)
   }
 

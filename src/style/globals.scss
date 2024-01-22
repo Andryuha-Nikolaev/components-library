@@ -25,6 +25,10 @@ body {
   flex-direction: column;
 }
 
+.body-user-select {
+  @include noselect;
+}
+
 main {
   flex-grow: 1;
 }

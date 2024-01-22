@@ -1,6 +1,6 @@
 "use client"
 
-import React from "react"
+import React, { useState } from "react"
 import s from "./UiButtonsBlock.module.scss"
 import RootButton from "@/ui/buttons/RootButton/RootButton"
 import { useAppDispatch } from "@/redux/hooks"
@@ -10,6 +10,7 @@ import RootText from "@/ui/texts/RootText/RootText"
 
 const UiButtonsBlock = () => {
   const dispatch = useAppDispatch()
+  const [openBlock, setOpenBlock] = useState(false)
 
   return (
     <div className={s["block"]}>
@@ -130,7 +131,18 @@ const UiButtonsBlock = () => {
         Открыть модалку alt
       </RootButton>
 
-      <div style={{ height: 700 }}>блок для высоты</div>
+      <div
+        onClick={() => {
+          setOpenBlock(!openBlock)
+        }}
+        className={s["block-height"]}
+        style={{ height: openBlock ? 1400 : 50 }}
+      >
+        блок для высоты
+      </div>
+      <div style={{ height: 400, backgroundColor: "azure" }}>
+        блок для высоты2
+      </div>
     </div>
   )
 }
