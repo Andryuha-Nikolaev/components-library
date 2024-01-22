@@ -1,0 +1,15 @@
+@import "../../style/vars";
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.btn {
+  background-color: bisque !important;
+}
+
+.block-height {
+  transition: height $transition;
+}

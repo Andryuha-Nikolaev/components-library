@@ -1,0 +1,80 @@
+@import "../../../style/vars";
+
+.root {
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $link-color-focus;
+  }
+
+  &.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+.button {
+  background-color: $button-bg;
+  width: 100%;
+  max-width: 438px;
+  min-height: 49px;
+  transition: opacity $transition;
+  color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 10px;
+  text-align: center;
+  gap: 8px;
+
+  @include hoverWrapper {
+    opacity: 0.8;
+  }
+
+  &.variant2 {
+    background-color: $button-bg-var2;
+    color: $white;
+  }
+
+  &.left {
+    margin: 0;
+  }
+  &.center {
+    margin: 0 auto;
+  }
+  &.right {
+    margin-left: auto;
+  }
+}
+
+.link {
+  font-size: inherit;
+  max-width: fit-content;
+  transition: color $transition;
+  text-decoration: underline;
+  display: inline;
+
+  @include hoverWrapper {
+    color: $link-color-hover;
+
+    path {
+      transition: fill $transition;
+      fill: $link-color-hover;
+    }
+  }
+
+  &.with-arrow {
+    display: inline-flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &.variant2 {
+    font-weight: 700;
+  }
+}

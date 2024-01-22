@@ -1,0 +1,12 @@
+@import "../../../../style/vars";
+
+.nav {
+  display: flex;
+  gap: 10px;
+}
+
+.link {
+  &.active {
+    background-color: cadetblue;
+  }
+}
