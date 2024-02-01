@@ -3,7 +3,7 @@ import Link from "next/link"
 import metaConstants from "@/constants/meta/meta"
 
 export const metadata: Metadata = {
-  title: `About us | ${metaConstants.META_SITE_NAME}`,
+  title: `About us | ${metaConstants.title}`,
 }
 
 export default function AboutLayout({

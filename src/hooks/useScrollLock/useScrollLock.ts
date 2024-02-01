@@ -1,21 +1,14 @@
 import { useEffect, useState } from "react"
+import { setIsBlockedScroll } from "@/redux/features/siteSlice"
+import { useAppDispatch } from "@/redux/hooks"
 
 const useScrollLock = (activeState: boolean) => {
+  const dispatch = useAppDispatch()
   const [openCount, setOpenCount] = useState(0)
   const [scrollY, setScrollY] = useState(0)
 
-  // console.log(scrollY)
-
   const bodyFixed = () => {
-    // const wrapper = document.querySelector("#wrapper") as HTMLElement | null
-    // const hasVerticalScrollbar = document.body.scrollHeight > window.innerHeight
-    // if (hasVerticalScrollbar && wrapper) {
-    //   wrapper.style.overflowY = "scroll"
-    // }
-
-    // const scrollY =
-    //   document.documentElement.style.getPropertyValue("--scroll-y")
-
+    dispatch(setIsBlockedScroll(true))
     const customScrollbarThumb = document.querySelector(
       "#custom-scrollbar-thumb"
     ) as HTMLElement | null
@@ -29,6 +22,7 @@ const useScrollLock = (activeState: boolean) => {
   }
 
   const bodyStatic = () => {
+    dispatch(setIsBlockedScroll(false))
     const customScrollbarThumb = document.querySelector(
       "#custom-scrollbar-thumb"
     ) as HTMLElement | null
@@ -36,25 +30,14 @@ const useScrollLock = (activeState: boolean) => {
     if (customScrollbarThumb) {
       customScrollbarThumb.style.visibility = "visible"
     }
-    // const wrapper = document.querySelector("#wrapper") as HTMLElement | null
     const scrollY = document.body.style.top
     document.body.style.position = ""
     document.body.style.top = ""
-    // document.documentElement.style.scrollBehavior = "auto"
 
     window.scrollTo(0, parseInt(scrollY || "0") * -1)
-    // document.documentElement.style.scrollBehavior = "smooth"
-    // if (wrapper) {
-    //   wrapper.style.overflowY = ""
-    // }
   }
 
   const handleScroll = () => {
-    // document.documentElement.style.setProperty(
-    //   "--scroll-y",
-    //   `${window.scrollY}px`
-    // )
-
     setScrollY(window.scrollY)
   }
 

@@ -13,7 +13,7 @@ export async function generateMetadata({
 }: Props): Promise<Metadata> {
   const post = await getPostById(id)
   return {
-    title: `Blog | ${post.title} | ${metaConstants.META_SITE_NAME}`,
+    title: `Blog | ${post.title} | ${metaConstants.title}`,
   }
 }
 

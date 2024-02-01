@@ -4,7 +4,7 @@ import { getAllPosts } from "@/services/getPosts"
 import metaConstants from "@/constants/meta/meta"
 
 export const metadata: Metadata = {
-  title: `Blog | ${metaConstants.META_SITE_NAME}`,
+  title: `Blog | ${metaConstants.title}`,
 }
 
 export const revalidate = 10

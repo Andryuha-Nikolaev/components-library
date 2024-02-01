@@ -1,4 +1,4 @@
-import React, { createElement } from "react"
+import React from "react"
 import s from "./RootButton.module.scss"
 import classNames from "classnames"
 import Link from "next/link"
@@ -18,6 +18,7 @@ type RootButtonProps = {
   role?: "button" | "next-link" | "link"
   linkTarget?: "_blank" | "_self"
   link?: string
+  textDecoration?: "underline" | "none"
 }
 
 const RootButton = ({
@@ -25,6 +26,7 @@ const RootButton = ({
   isDisabled = false,
   onClick,
   className,
+  textDecoration = "none",
   withArrow = false,
   appearance = "button",
   styleVariant = "1",
@@ -32,7 +34,7 @@ const RootButton = ({
   textTransform = "none",
   buttonType = "button",
   role = "button",
-  linkTarget = "_self",
+  linkTarget,
   link,
 }: RootButtonProps) => {
   const buttonClassName = classNames(
@@ -46,6 +48,7 @@ const RootButton = ({
   )
 
   const styleConfig = {
+    textDecoration: textDecoration,
     textTransform: textTransform,
   }
 
@@ -60,7 +63,7 @@ const RootButton = ({
     style: styleConfig,
     className: buttonClassName,
     href: link,
-    target: "_blank",
+    target: linkTarget ? linkTarget : "_blank",
     rel: "noreferrer noopener",
   }
 
@@ -68,7 +71,7 @@ const RootButton = ({
     style: styleConfig,
     className: buttonClassName,
     href: link ? link : "",
-    target: linkTarget,
+    target: linkTarget ? linkTarget : "_self",
   }
 
   let ButtonComponent

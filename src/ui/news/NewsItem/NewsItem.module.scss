@@ -1,0 +1,43 @@
+@import "../../../style/vars";
+
+.block {
+  max-width: 322px;
+  &.home {
+    max-width: 437px;
+
+    .img-wrap {
+      height: 240px;
+    }
+    .info-wrap {
+      margin: 16px 0 4px;
+    }
+  }
+
+  &.main-news {
+    .img-wrap {
+      aspect-ratio: 1/1;
+    }
+    .info-wrap {
+      margin: 10px 0 6px;
+    }
+  }
+
+  &.news {
+    .img-wrap {
+      height: 180px;
+    }
+    .info-wrap {
+      margin: 10px 0 10px;
+    }
+  }
+}
+
+.img-wrap {
+  position: relative;
+}
+
+.info-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

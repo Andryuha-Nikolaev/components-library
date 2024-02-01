@@ -1,5 +1,6 @@
 @import "./vars";
 @import "./scrollbar";
+@import "./date-picker";
 
 * {
   box-sizing: border-box;
@@ -10,7 +11,8 @@
 }
 
 html {
-  // scroll-behavior: smooth;;
+  // scroll-behavior: smooth;
+  // overscroll-behavior: none;
 }
 
 body {
@@ -21,6 +23,7 @@ body {
   min-height: 100dvh;
   width: 100%;
   background-color: gainsboro;
+  color: $color-text-primary;
   display: flex;
   flex-direction: column;
   font-family: $open-sans-font;
@@ -32,6 +35,10 @@ body {
 
 main {
   flex-grow: 1;
+}
+
+img {
+  flex-shrink: 0;
 }
 
 a {
@@ -48,6 +55,34 @@ h3,
 h4,
 h5 {
   line-height: 1.2;
+}
+
+h1 {
+  @include text-h1;
+}
+
+h2 {
+  @include text-h2;
+}
+
+h3 {
+  @include text-h3;
+}
+
+h4 {
+  @include text-h4;
+}
+
+h5 {
+  @include text-h5;
+}
+
+h6 {
+  @include text-h6;
+}
+
+p {
+  @include text-md;
 }
 
 button {

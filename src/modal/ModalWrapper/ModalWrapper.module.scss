@@ -30,7 +30,6 @@
   max-width: 600px;
   min-height: 100px;
   max-height: 90dvh;
-  transform: scale(0);
   transition: transform $transition;
   overflow: auto;
 
@@ -50,10 +49,6 @@
     background-color: $color-scrollbar-thumb;
     border-radius: 10px;
     border: 2px solid $color-scrollbar-track;
-  }
-
-  &.open {
-    transform: scale(1);
   }
 }
 

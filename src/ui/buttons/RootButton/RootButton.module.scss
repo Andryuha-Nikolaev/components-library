@@ -1,6 +1,7 @@
 @import "../../../style/vars";
 
 .root {
+  text-decoration: underline;
   &:focus {
     outline: none;
   }
@@ -20,7 +21,7 @@
   width: 100%;
   max-width: 438px;
   min-height: 49px;
-  transition: opacity $transition;
+  transition: background-color $transition;
   color: $white;
   display: flex;
   align-items: center;
@@ -32,12 +33,16 @@
   gap: 8px;
 
   @include hoverWrapper {
-    opacity: 0.8;
+    background-color: $color-button-hover;
   }
 
   &.variant2 {
     background-color: $button-bg-var2;
     color: $white;
+
+    @include hoverWrapper {
+      background-color: $color-button-hover-var2;
+    }
   }
 
   &.left {
@@ -55,7 +60,7 @@
   font-size: inherit;
   max-width: fit-content;
   transition: color $transition;
-  text-decoration: underline;
+  text-decoration: none;
   display: inline;
 
   @include hoverWrapper {
@@ -69,12 +74,17 @@
 
   &.with-arrow {
     display: inline-flex;
-    gap: 10px;
+    gap: 8px;
     justify-content: center;
     align-items: center;
   }
 
   &.variant2 {
     font-weight: 700;
+    font-size: 14px;
+  }
+  &.variant3 {
+    font-weight: 700;
+    font-size: 18px;
   }
 }

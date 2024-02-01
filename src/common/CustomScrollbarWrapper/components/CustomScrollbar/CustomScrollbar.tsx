@@ -43,7 +43,7 @@ const CustomScrollbar = () => {
     )
   }
 
-  const handleMouseDown = (event: any) => {
+  const handleMouseDown = (event: React.MouseEvent) => {
     document.body.classList.add("body-user-select")
     setWinScrollY(window.scrollY)
     setMouseDownPosition(event.clientY)

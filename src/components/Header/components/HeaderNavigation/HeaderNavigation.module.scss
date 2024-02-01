@@ -2,11 +2,50 @@
 
 .nav {
   display: flex;
-  gap: 10px;
+  flex-direction: column;
+  position: relative;
+
+  @media screen and (min-width: $tablet) {
+    gap: 9px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 242px;
+      top: 18px;
+      width: 90px;
+      height: 4px;
+      background-color: $dark-red;
+    }
+  }
+
+  @media screen and (min-width: $desk_sm) {
+    gap: 22px;
+    max-width: fit-content;
+    margin-left: auto;
+    flex-direction: row;
+    justify-content: flex-end;
+    // cursor: pointer;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: $desk_md) {
+    gap: 36px;
+  }
 }
 
-.link {
-  &.active {
-    background-color: cadetblue;
+.separator-el {
+  display: none;
+
+  @media screen and (min-width: $desk_sm) {
+    width: 1px;
+    height: 16px;
+    background-color: $white;
+    position: relative;
+    top: 12px;
+    display: block;
   }
 }

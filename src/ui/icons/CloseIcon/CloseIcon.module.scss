@@ -17,6 +17,14 @@
       stroke: $color-close-icon-hover;
     }
   }
+  &.transparent {
+    @include hoverWrapper {
+      .stroke {
+        fill: transparent;
+        stroke: transparent;
+      }
+    }
+  }
 }
 
 .line {
@@ -27,6 +35,6 @@
 }
 
 .icon {
-  width: 22px;
+  width: 20px;
   height: auto;
 }

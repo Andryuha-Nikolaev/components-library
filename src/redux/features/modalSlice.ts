@@ -15,7 +15,7 @@ type ModalState = {
 const initialState = {
   isOpen: false,
   config: {
-    modalId: "default",
+    modalId: undefined,
   },
 } as ModalState
 

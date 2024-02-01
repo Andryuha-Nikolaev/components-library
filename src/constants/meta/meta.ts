@@ -1,5 +1,6 @@
 const metaConstants = {
-  META_SITE_NAME: "Components Library",
-  META_SITE_DESCRIPTION: "My components",
+  title: "Федерация Дзюдо России",
+  description:
+    "Общероссийская общественная организация «Федерация дзюдо России» — общероссийская общественная организация, занимающаяся развитием дзюдо в России.",
 }
 export default metaConstants

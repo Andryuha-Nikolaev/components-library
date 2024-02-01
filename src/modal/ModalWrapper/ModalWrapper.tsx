@@ -44,7 +44,7 @@ const ModalWrapper = () => {
       >
         {!hiddenCloseBtn && (
           <button onClick={handleClose} className={classNames(s["close-btn"])}>
-            <CloseIcon color="#000" strokeColor="#000" form="rect" />
+            <CloseIcon color="#fff" strokeColor="transparent" form="round" />
           </button>
         )}
         <ModalComponent {...config} />

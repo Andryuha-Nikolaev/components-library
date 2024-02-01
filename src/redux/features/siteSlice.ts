@@ -1,11 +1,13 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit"
+import { createSlice } from "@reduxjs/toolkit"
 
 export type siteState = {
   isFixedHeader: boolean
+  isBlockedScroll: boolean
 }
 
 const initialState = {
   isFixedHeader: true,
+  isBlockedScroll: false,
 } as siteState
 
 export const site = createSlice({
@@ -15,8 +17,11 @@ export const site = createSlice({
     setIsFixedHeader: (state, action: { payload: boolean }) => {
       state.isFixedHeader = action.payload
     },
+    setIsBlockedScroll: (state, action: { payload: boolean }) => {
+      state.isBlockedScroll = action.payload
+    },
   },
 })
 
-export const { setIsFixedHeader } = site.actions
+export const { setIsFixedHeader, setIsBlockedScroll } = site.actions
 export default site.reducer

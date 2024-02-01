@@ -6,7 +6,7 @@ import { decrement, increment, reset } from "@/redux/features/counterSlice"
 import { useAppDispatch, useAppSelector } from "@/redux/hooks"
 
 const BlogBlock = ({ posts }: { posts: any }) => {
-  const [blogPosts, setBlogPosts] = useState(posts)
+  const [blogPosts] = useState(posts)
 
   const count = useAppSelector((state) => state.counter.value)
   const dispatch = useAppDispatch()

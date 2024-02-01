@@ -1,15 +1,20 @@
 import React from "react"
 import s from "./CloseIcon.module.scss"
+import classNames from "classnames"
 
 type CloseIconProps = {
   color: string
-  strokeColor: string
+  strokeColor?: string
   form: "round" | "rect"
 }
 
-const CloseIcon = ({ color, strokeColor, form }: CloseIconProps) => {
+const CloseIcon = ({
+  color,
+  strokeColor = "transparent",
+  form,
+}: CloseIconProps) => {
   return (
-    <div className={s["wrapper"]}>
+    <div className={classNames(s["wrapper"], s[strokeColor])}>
       {form === "rect" && (
         <svg
           className={s["icon"]}

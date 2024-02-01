@@ -1,9 +1,8 @@
 import type { Metadata } from "next"
-import metaConstants from "@/constants/meta/meta"
+import { pagesConstants } from "@/constants/pages/pages"
 
 export const metadata: Metadata = {
-  title: `Home | ${metaConstants.META_SITE_NAME}`,
-  description: metaConstants.META_SITE_DESCRIPTION,
+  ...pagesConstants.pages.main.meta,
 }
 
 export default function Home() {
