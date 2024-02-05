@@ -16,7 +16,11 @@ const Footer = () => {
   const pathname = usePathname()
 
   return (
-    <footer className={classNames(s["footer"])}>
+    <footer
+      className={classNames(s["footer"])}
+      itemScope
+      itemType="http://schema.org/Organization"
+    >
       <Container>
         <div className={classNames(s["wrap"])}>
           {pathname === "/" && (
@@ -31,7 +35,7 @@ const Footer = () => {
           <div className={classNames(s["content"])}>
             <div className={classNames(s["info"])}>
               <div className={classNames(s["info-content"])}>
-                <RootText tag="h6" fontVariant="russo">
+                <RootText as="h6" fontVariant="russo">
                   Адрес
                 </RootText>
                 <RootButton
@@ -44,7 +48,7 @@ const Footer = () => {
                 </RootButton>
               </div>
               <div className={classNames(s["info-content"])}>
-                <RootText tag="h6" fontVariant="russo">
+                <RootText as="h6" fontVariant="russo">
                   Дирекция ФДР
                 </RootText>
 

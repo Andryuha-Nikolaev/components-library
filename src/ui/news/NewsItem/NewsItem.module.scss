@@ -3,7 +3,26 @@
 .block {
   max-width: 322px;
   &.home {
-    max-width: 437px;
+    max-width: 100%;
+
+    &.index2 {
+      display: none;
+    }
+
+    &.index3 {
+      display: none;
+    }
+
+    @media screen and (min-width: $tablet) {
+      max-width: 437px;
+      &.index2 {
+        display: block;
+      }
+
+      &.index3 {
+        display: block;
+      }
+    }
 
     .img-wrap {
       height: 240px;

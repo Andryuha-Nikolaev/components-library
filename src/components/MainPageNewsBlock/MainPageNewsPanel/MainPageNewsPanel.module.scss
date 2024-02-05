@@ -1,0 +1,8 @@
+@import "../../../style/vars";
+
+.buttons {
+  background-color: $black;
+  display: flex;
+  gap: 1px;
+  border: 1px solid $black;
+}

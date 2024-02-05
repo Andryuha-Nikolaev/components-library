@@ -238,28 +238,28 @@ const pagesConstants: PagesConstants = {
       subpages: {
         russianEvents: {
           name: "Российские мероприятия",
-          path: "/news?category=russian-events",
+          path: "/news?category=russian",
           meta: {
             title: `Российские мероприятия | ${metaConstants.title}`,
           },
         },
         internationalEvents: {
           name: "Международные мероприятия",
-          path: "/news?category=international-events",
+          path: "/news?category=international",
           meta: {
             title: `Международные мероприятия | ${metaConstants.title}`,
           },
         },
         pressAboutJudo: {
           name: "Пресса о дзюдо",
-          path: "/news?category=press-about-judo",
+          path: "/news?category=press",
           meta: {
             title: `Пресса о дзюдо | ${metaConstants.title}`,
           },
         },
         judoInRegions: {
           name: "Дзюдо в регионах",
-          path: "/news?category=judo-in-regions",
+          path: "/news?category=regions",
           meta: {
             title: `Дзюдо в регионах | ${metaConstants.title}`,
           },

@@ -31,6 +31,7 @@ const SocialMediaBlock = ({ variant }: { variant: "header" | "footer" }) => {
 
         return (
           <a
+            aria-label={item.name}
             className={classNames(s["link"], s[variant])}
             href={item.link}
             target="_blank"

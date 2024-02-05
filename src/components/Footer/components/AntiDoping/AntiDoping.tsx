@@ -16,12 +16,7 @@ const AntiDoping = () => {
         role="link"
         textTransform="uppercase"
       >
-        <Image
-          src={gramophone}
-          alt="сообщить о допинге"
-          width={47}
-          height={38}
-        ></Image>
+        <Image src={gramophone} alt="Cообщить" width={47} height={38}></Image>
         сообщить о допинге
       </RootButton>
       <RootButton
@@ -31,12 +26,7 @@ const AntiDoping = () => {
         role="link"
         textTransform="uppercase"
       >
-        <Image
-          src={tablets}
-          alt="Проверить лекарство"
-          width={40}
-          height={38}
-        ></Image>
+        <Image src={tablets} alt="Проверить" width={40} height={38}></Image>
         Проверить лекарство
       </RootButton>
     </div>

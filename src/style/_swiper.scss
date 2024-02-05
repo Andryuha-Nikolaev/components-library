@@ -1,0 +1,15 @@
+.swiper-pagination-bullet {
+  width: 12px !important;
+  height: 12px !important;
+  margin: 0 8px !important;
+  background-color: $medium-gray !important;
+  opacity: 1 !important;
+
+  &-active {
+    background-color: $middle-red !important;
+  }
+}
+
+// слайдер с баннером
+.main-banner-slider {
+}

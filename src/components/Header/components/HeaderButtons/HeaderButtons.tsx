@@ -6,7 +6,11 @@ import classNames from "classnames"
 const HeaderButtons = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className={s["block"]}>
-      <Link href={"/"} className={classNames(s["btn"], s["btn-search"])}>
+      <Link
+        aria-label="open search"
+        href={"/"}
+        className={classNames(s["btn"], s["btn-search"])}
+      >
         <svg
           width="20"
           height="20"
@@ -28,6 +32,7 @@ const HeaderButtons = ({ children }: { children: React.ReactNode }) => {
         </svg>
       </Link>
       <a
+        aria-label="to personal cabinet"
         href="https://cabinet.judo.ru/"
         target="_self"
         className={classNames(s["btn"], s["btn-lk"])}

@@ -34,7 +34,7 @@
     left: 0;
     will-change: transform;
     transform: rotate(0deg);
-    transition: all $transition;
+    transition: all $transition-fast;
     background-color: $color-burger-icon;
 
     &:nth-child(1) {

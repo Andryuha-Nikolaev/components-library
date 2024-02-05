@@ -1,0 +1,10 @@
+@import "../../style/vars";
+
+.main {
+  display: grid;
+  gap: 32px 10px;
+
+  @media screen and (min-width: $mobile) {
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -2,28 +2,19 @@
 
 .header {
   background-color: $header-bg;
-
   z-index: $z-index-header;
 
   &.fixed {
     position: fixed;
-    top: calc(0px - $header-height-mobile);
+    top: 0;
     left: 0;
     right: 0;
-
     transition: top $transition;
 
     @media screen and (min-width: $tablet) {
-      top: calc(0px - $header-height-tablet);
     }
     @media screen and (min-width: $desk_sm) {
-      top: calc(0px - $header-height-desk);
-      color: $color-text-secondary;
     }
-  }
-
-  &.show {
-    top: 0;
   }
 }
 
@@ -87,24 +78,17 @@
   @media screen and (min-width: $desk_sm) {
     padding: 0;
     max-width: 100%;
+    flex-direction: row;
+    align-items: center;
   }
 }
 
-.top-block {
-  display: flex;
-
-  @media screen and (min-width: $tablet) {
-    // width: 100%;
-  }
+.nav-block {
+  flex-grow: 1;
 
   @media screen and (min-width: $desk_sm) {
-    justify-content: flex-end;
-    padding-right: 90px;
+    padding-right: 120px;
   }
-}
-
-.bottom-block {
-  flex-grow: 1;
 }
 
 .social-block {

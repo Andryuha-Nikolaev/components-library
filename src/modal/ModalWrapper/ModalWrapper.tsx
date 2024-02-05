@@ -43,7 +43,11 @@ const ModalWrapper = () => {
         className={classNames(s["modal"], isOpen && s["open"])}
       >
         {!hiddenCloseBtn && (
-          <button onClick={handleClose} className={classNames(s["close-btn"])}>
+          <button
+            aria-label="close modal"
+            onClick={handleClose}
+            className={classNames(s["close-btn"])}
+          >
             <CloseIcon color="#fff" strokeColor="transparent" form="round" />
           </button>
         )}

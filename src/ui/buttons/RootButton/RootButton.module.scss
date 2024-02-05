@@ -21,7 +21,10 @@
   width: 100%;
   max-width: 438px;
   min-height: 49px;
-  transition: background-color $transition;
+  transition:
+    background-color $transition,
+    color $transition,
+    border-color $transition;
   color: $white;
   display: flex;
   align-items: center;
@@ -41,6 +44,16 @@
     color: $white;
 
     @include hoverWrapper {
+      background-color: $color-button-hover-var2;
+    }
+  }
+
+  &.variant3 {
+    background-color: $white;
+    color: $black;
+
+    @include hoverWrapper {
+      color: $white;
       background-color: $color-button-hover-var2;
     }
   }

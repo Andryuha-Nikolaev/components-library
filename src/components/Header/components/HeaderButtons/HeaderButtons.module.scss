@@ -14,8 +14,6 @@
 
   @media screen and (min-width: $desk_sm) {
     gap: 8px;
-    top: 16px;
-    transform: translateY(0);
   }
 }
 
@@ -28,7 +26,7 @@
 
   &-search {
     path {
-      transition: fill $transition;
+      transition: fill $transition-fast;
     }
     @include hoverWrapper {
       &:hover {
@@ -41,7 +39,7 @@
 
   &-lk {
     path {
-      transition: stroke $transition;
+      transition: stroke $transition-fast;
     }
     @include hoverWrapper {
       &:hover {

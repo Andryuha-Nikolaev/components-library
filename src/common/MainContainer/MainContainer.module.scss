@@ -4,8 +4,12 @@
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 10px;
   position: relative;
+
+  @media screen and (min-width: $mobile_sm) {
+    padding: 0 24px;
+  }
 
   @media screen and (min-width: $tablet) {
     padding: 0 40px;

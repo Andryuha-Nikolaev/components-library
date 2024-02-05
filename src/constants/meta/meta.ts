@@ -1,6 +1,18 @@
 const metaConstants = {
-  title: "Федерация Дзюдо России",
-  description:
-    "Общероссийская общественная организация «Федерация дзюдо России» — общероссийская общественная организация, занимающаяся развитием дзюдо в России.",
+  title: "Мета заголовок",
+  description: "Мета описание",
+  metadataBase: new URL(
+    process.env["NEXT_PUBLIC_BASE_URL"] ?? "http://localhost:3000"
+  ),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    images: [
+      `${process.env["NEXT_PUBLIC_BASE_URL"] ?? "http://localhost:3000"}/og-image.png`,
+    ],
+    locale: "ru_RU",
+  },
 }
+
 export default metaConstants

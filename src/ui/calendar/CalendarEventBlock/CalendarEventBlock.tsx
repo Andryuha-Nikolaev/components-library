@@ -6,11 +6,11 @@ import classNames from "classnames"
 import RootButton from "@/ui/buttons/RootButton/RootButton"
 import RootText from "@/ui/texts/RootText/RootText"
 import Image from "next/image"
-import image from "@/assets/test/judo-test.png"
+import image from "@/assets/test/test1.webp"
 import PointIcon from "@/ui/icons/PointIcon/PointIcon"
 import CalendarEventMenu from "./components/CalendarEventMenu/CalendarEventMenu"
 import useClickOutside from "@/hooks/useClickOutside/useClickOutside"
-import useResize from "@/hooks/useResize/useResize"
+import { useAppSelector } from "@/redux/hooks"
 
 type CalendarEventBlockProps = {
   page: "home" | "calendar"
@@ -18,7 +18,6 @@ type CalendarEventBlockProps = {
 
 const CalendarEventBlock = ({ page }: CalendarEventBlockProps) => {
   const [isOpen, setIsOpen] = useState(false)
-  // const [isOpenMob, setIsOpenMob] = useState(false)
 
   const elRefMob = useRef<HTMLDivElement>(null)
   const elRef = useRef<HTMLDivElement>(null)
@@ -32,16 +31,13 @@ const CalendarEventBlock = ({ page }: CalendarEventBlockProps) => {
     setIsOpen(false)
   }
 
-  const { isСonditionFulfilled } = useResize({
-    moreOrLess: "less",
-    moreOrLessValue: 1024,
-  })
+  const { isTablet } = useAppSelector((state) => state.site)
 
   useClickOutside({
     elementRefs: [elRefMob, elRef, btnRef],
     isOpen: isOpen,
     onClose: handleClose,
-    onListener: isСonditionFulfilled,
+    onListener: isTablet,
   })
 
   return (
@@ -111,6 +107,7 @@ const CalendarEventBlock = ({ page }: CalendarEventBlockProps) => {
           <div className={classNames(s["calendar-wrap"])}>
             <div ref={btnRef} className={classNames(s["btns-wrap"])}>
               <button
+                aria-label="open events"
                 onClick={isOpenToggle}
                 className={classNames(s["open-btn"])}
               >

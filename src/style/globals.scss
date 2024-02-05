@@ -1,5 +1,6 @@
 @import "./vars";
 @import "./scrollbar";
+@import "./swiper";
 @import "./date-picker";
 
 * {
@@ -22,7 +23,7 @@ body {
   text-rendering: optimizeSpeed;
   min-height: 100dvh;
   width: 100%;
-  background-color: gainsboro;
+  background-color: $white;
   color: $color-text-primary;
   display: flex;
   flex-direction: column;

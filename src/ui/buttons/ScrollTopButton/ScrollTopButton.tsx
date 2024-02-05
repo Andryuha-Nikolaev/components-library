@@ -14,7 +14,11 @@ const ScrollTopButton = () => {
 
   return (
     <div className={s["wrap"]}>
-      <button className={s["btn"]} onClick={handleScrollTop}>
+      <button
+        aria-label="scroll top"
+        className={s["btn"]}
+        onClick={handleScrollTop}
+      >
         <ScrollTopIcon />
       </button>
       <RootText tag="p">наверх</RootText>

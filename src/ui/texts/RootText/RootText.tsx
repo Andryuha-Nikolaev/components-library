@@ -23,6 +23,7 @@ type RootTextProps = {
   colorVariant?: "black" | "white" | "red" | "dark-gray"
   fontVariant?: "russo" | "open-sans"
   fontWeightVariant?: "normal" | "bold"
+  textAlign?: "center"
 }
 
 const RootText = ({
@@ -33,6 +34,7 @@ const RootText = ({
   colorVariant,
   fontVariant,
   fontWeightVariant,
+  textAlign,
 }: RootTextProps) => {
   const textClassName = classNames(
     s["text"],
@@ -43,8 +45,13 @@ const RootText = ({
     className && className
   )
 
+  const textStyles = {
+    textAlign: textAlign,
+  }
+
   const textProps = {
     className: textClassName,
+    style: textStyles,
   }
 
   return createElement(tag, textProps, children)

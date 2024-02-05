@@ -1,5 +1,12 @@
 @import "../../../style/vars";
 
+.block {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: $z-index-cookies-block;
+}
+
 .content {
   padding: 24px 16px 42px;
   background: rgba(31, 31, 31, 0.8);

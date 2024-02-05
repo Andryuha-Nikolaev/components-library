@@ -1,11 +1,11 @@
 import React from "react"
 import s from "./UiElementsBlock.module.scss"
 import RootText from "@/ui/texts/RootText/RootText"
-import CookiesBlock from "@/ui/cookies/CookiesBlock/CookiesBlock"
+// import CookiesBlock from "@/ui/cookies/CookiesBlock/CookiesBlock"
 import PeriodCalendarBlock from "@/ui/calendar/PeriodCalendarBlock/PeriodCalendarBlock"
 import CalendarBlock from "@/ui/calendar/CalendarBlock/CalendarBlock"
 import CalendarEventBlock from "@/ui/calendar/CalendarEventBlock/CalendarEventBlock"
-import NewsItem from "@/ui/news/NewsItem/NewsItem"
+// import NewsItem from "@/ui/news/NewsItem/NewsItem"
 
 const UiElementsBlock = () => {
   return (
@@ -13,9 +13,7 @@ const UiElementsBlock = () => {
       <RootText tag="h6" fontVariant="russo">
         Cookies:
       </RootText>
-      <div className={s["wrap"]}>
-        <CookiesBlock />
-      </div>
+      <div className={s["wrap"]}>{/* <CookiesBlock /> */}</div>
       <RootText tag="h6" fontVariant="russo">
         Календарь основной:
       </RootText>
@@ -37,7 +35,7 @@ const UiElementsBlock = () => {
         <CalendarEventBlock page="calendar" />
       </div>
 
-      <div style={{ minHeight: 500 }} className={s["wrap"]}>
+      {/* <div style={{ minHeight: 500 }} className={s["wrap"]}>
         <RootText as="text-lg" fontVariant="russo">
           Новость на главной
         </RootText>
@@ -50,7 +48,7 @@ const UiElementsBlock = () => {
           Новость на странице новостей
         </RootText>
         <NewsItem page="news" />
-      </div>
+      </div> */}
     </div>
   )
 }
