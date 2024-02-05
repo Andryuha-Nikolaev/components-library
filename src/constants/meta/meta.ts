@@ -8,9 +8,9 @@ const metaConstants = {
     canonical: "/",
   },
   openGraph: {
-    images: [
-      `${process.env["NEXT_PUBLIC_BASE_URL"] ?? "http://localhost:3000"}/og-image.png`,
-    ],
+    // images: [
+    //   `${process.env["NEXT_PUBLIC_BASE_URL"] ?? "http://localhost:3000"}/og-image.png`,
+    // ],
     locale: "ru_RU",
   },
 }

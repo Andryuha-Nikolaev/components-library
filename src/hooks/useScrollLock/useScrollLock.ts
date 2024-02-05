@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react"
 import { setIsBlockedScroll } from "@/redux/features/siteSlice"
 import { useAppDispatch } from "@/redux/hooks"
+import { usePathname } from "next/navigation"
 
 const useScrollLock = (activeState: boolean) => {
   const dispatch = useAppDispatch()
   const [openCount, setOpenCount] = useState(0)
   const [scrollY, setScrollY] = useState(0)
+
+  const pathname = usePathname()
 
   const bodyFixed = () => {
     dispatch(setIsBlockedScroll(true))
@@ -42,6 +45,11 @@ const useScrollLock = (activeState: boolean) => {
   }
 
   useEffect(() => {
+    document.body.style.position = ""
+    document.body.style.top = ""
+  }, [pathname])
+
+  useEffect(() => {
     if (activeState) {
       setOpenCount(1)
     }
@@ -51,6 +59,7 @@ const useScrollLock = (activeState: boolean) => {
     if (activeState) {
       bodyFixed()
     } else if (openCount > 0) {
+      setOpenCount(0)
       bodyStatic()
     }
 
